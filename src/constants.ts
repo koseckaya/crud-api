@@ -7,7 +7,9 @@ export const ERROR_MSG = {
     'Missing required fields. Required fields: username (string), age (number), hobbies (array)',
   INVALID_DATA_TYPES:
     'Invalid data types. Required types: username (string), age (number), hobbies (array of strings)',
-  INVALID_JSON: 'Invalid JSON in request body'
+  INVALID_JSON: 'Invalid JSON in request body',
+  INTERNAL_SERVER_ERROR:
+    'Internal Server Error occurred while processing the request'
 };
 
 export const METHODS = {
@@ -22,5 +24,6 @@ export const STATUS_CODES = {
   CREATED: 201,
   NO_CONTENT: 204,
   BAD_REQUEST: 400,
-  NOT_FOUND: 404
+  NOT_FOUND: 404,
+  INTERNAL_SERVER_ERROR: 500
 };

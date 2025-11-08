@@ -36,6 +36,19 @@ export const validateUserData = (data: unknown): ValidationResult => {
   };
 };
 
+export const isValidUserData = (data: unknown): data is CreateUserDto => {
+  if (!data || typeof data !== 'object') return false;
+
+  const userData = data as Record<string, unknown>;
+
+  return (
+    typeof userData.username === 'string' &&
+    typeof userData.age === 'number' &&
+    Array.isArray(userData.hobbies) &&
+    userData.hobbies.every((hobby) => typeof hobby === 'string')
+  );
+};
+
 export const parseAndValidateBody = async (
   req: IncomingMessage
 ): Promise<RequestValidationResult> => {

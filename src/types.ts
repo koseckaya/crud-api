@@ -25,7 +25,7 @@ export interface ValidationSuccess {
 
 export interface RequestValidationResult {
   isValid: boolean;
-  data?: CreateUserDto;
+  data?: unknown;
   error?: string;
 }
 
