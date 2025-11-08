@@ -29,6 +29,11 @@ export interface RequestValidationResult {
   error?: string;
 }
 
+export interface UpdateMessage {
+  type: 'update';
+  data: User[];
+}
+
 export type ValidationResult = ValidationError | ValidationSuccess;
 
 export type StatusCode = (typeof STATUS_CODES)[keyof typeof STATUS_CODES];
