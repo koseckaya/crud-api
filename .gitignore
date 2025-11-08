@@ -1,0 +1,11 @@
+node_modules/
+build/
+temp/
+/config.local.js
+.env
+*.log
+.idea/
+.vscode/
+*.suo
+*.user
+*.bak
