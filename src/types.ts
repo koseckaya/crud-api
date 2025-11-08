@@ -23,6 +23,12 @@ export interface ValidationSuccess {
   data: CreateUserDto;
 }
 
+export interface RequestValidationResult {
+  isValid: boolean;
+  data?: CreateUserDto;
+  error?: string;
+}
+
 export type ValidationResult = ValidationError | ValidationSuccess;
 
 export type StatusCode = (typeof STATUS_CODES)[keyof typeof STATUS_CODES];
